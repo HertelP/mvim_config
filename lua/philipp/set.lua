@@ -3,7 +3,7 @@ vim.opt.nu = true
 vim.opt.mouse = c
 
 vim.opt.ignorecase = true
-vim.opt.wrap = true 
+vim.opt.wrap = false 
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
