@@ -50,6 +50,7 @@ require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+    use { 'mhartington/formatter.nvim' }
     use {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
