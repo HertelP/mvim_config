@@ -39,13 +39,13 @@ require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},     -- Required
         }
     }
-    use{
+    use({
         "kdheepak/lazygit.nvim",
         -- optional for floating window border decoration
         requires = {
             "nvim-lua/plenary.nvim",
         },
-    }
+    })
 
     use{
         "tpope/vim-fugitive",
