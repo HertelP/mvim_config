@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/philipp/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/philipp/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
+local package_path_str = "/home/philipp/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?/init.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/philipp/.cache/nvim/packer_hererocks/2.1.1697887905/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -86,11 +86,7 @@ _G.packer_plugins = {
   },
   ["copilot.lua"] = {
     commands = { "Copilot" },
-<<<<<<< HEAD
-    config = { "\27LJ\2\ná\2\0\0\5\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\0025\3\b\0=\3\t\0024\3\0\0=\3\n\2B\0\2\1K\0\1\0\26server_opts_overrides\14filetypes\1\0\t\6.\1\bcvs\1\bsvn\1\rhgcommit\1\14gitrebase\1\14gitcommit\1\thelp\1\rmarkdown\1\tyaml\1\15suggestion\1\0\1\25copilot_node_command\tnode\vkeymap\1\0\6\vaccept\n<C-j>\fdismiss\n<C-]>\16accept_word\1\tprev\n<M-[>\16accept_line\1\tnext\n<M-]>\1\0\3\rdebounce\3K\17auto_trigger\2\fenabled\2\nsetup\fcopilot\frequire\0" },
-=======
-    config = { "\27LJ\2\ná\2\0\0\5\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\0025\3\b\0=\3\t\0024\3\0\0=\3\n\2B\0\2\1K\0\1\0\26server_opts_overrides\14filetypes\1\0\t\6.\1\bcvs\1\bsvn\1\rhgcommit\1\14gitrebase\1\14gitcommit\1\thelp\1\rmarkdown\1\tyaml\1\15suggestion\1\0\1\25copilot_node_command\tnode\vkeymap\1\0\6\vaccept\n<C-j>\tnext\n<M-]>\16accept_line\1\16accept_word\1\tprev\n<M-[>\fdismiss\n<C-]>\1\0\3\rdebounce\3K\17auto_trigger\2\fenabled\2\nsetup\fcopilot\frequire\0" },
->>>>>>> b7fab3983ec4a854efc987123c18839435b836b4
+    config = { "\27LJ\2\ná\2\0\0\5\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\0025\3\b\0=\3\t\0024\3\0\0=\3\n\2B\0\2\1K\0\1\0\26server_opts_overrides\14filetypes\1\0\t\6.\1\bcvs\1\bsvn\1\rhgcommit\1\14gitrebase\1\14gitcommit\1\thelp\1\rmarkdown\1\tyaml\1\15suggestion\1\0\1\25copilot_node_command\tnode\vkeymap\1\0\6\fdismiss\n<C-]>\vaccept\n<C-j>\tprev\n<M-[>\16accept_line\1\16accept_word\1\tnext\n<M-]>\1\0\3\17auto_trigger\2\fenabled\2\rdebounce\3K\nsetup\fcopilot\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
