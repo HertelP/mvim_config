@@ -13,7 +13,7 @@ local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function(use)
   	use 'wbthomason/packer.nvim'
-   use { "ellisonleao/gruvbox.nvim" }
+    use { "ellisonleao/gruvbox.nvim" }
 	use {
   		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		-- or                            , branch = '0.1.x',
