@@ -40,6 +40,17 @@ require('packer').startup(function(use)
         }
     }
     use({
+        "jackMort/ChatGPT.nvim",
+        config = function()
+            require("chatgpt").setup()
+        end,
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim"
+        }
+    })
+    use({
         "kdheepak/lazygit.nvim",
         -- optional for floating window border decoration
         requires = {
@@ -47,7 +58,7 @@ require('packer').startup(function(use)
         },
     })
 
-    use{
+    use {
         "tpope/vim-fugitive",
     }
     use {
