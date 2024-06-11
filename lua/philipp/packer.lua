@@ -14,8 +14,13 @@ local packer_bootstrap = ensure_packer()
 require('packer').startup(function(use)
   	use 'wbthomason/packer.nvim'
     use { "ellisonleao/gruvbox.nvim" }
+    use { 
+        "christoomey/vim-tmux-navigator",
+        lazy = false
+    }
+    use { "catppuccin/nvim", as = "catppuccin"}
 	use {
-  		'nvim-telescope/telescope.nvim', tag = '0.1.2',
+  		'nvim-telescope/telescope.nvim', tag = '0.1.8',
 		-- or                            , branch = '0.1.x',
   		requires = { {'nvim-lua/plenary.nvim'} }
 	}
@@ -42,7 +47,9 @@ require('packer').startup(function(use)
     use({
         "jackMort/ChatGPT.nvim",
         config = function()
-            require("chatgpt").setup()
+            require("chatgpt").setup({
+                api_key_cmd = "pass show api/tokens/openai"
+            })
         end,
         requires = {
             "MunifTanjim/nui.nvim",
@@ -66,41 +73,6 @@ require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use { 'mhartington/formatter.nvim' }
-    use {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require('copilot').setup({
-                suggestion = {
-                    enabled = true,
-                    auto_trigger = true,
-                    debounce = 75,
-                    keymap = {
-                        accept = "<C-j>",
-                        accept_word = false,
-                        accept_line = false,
-                        next = "<M-]>",
-                        prev = "<M-[>",
-                        dismiss = "<C-]>",
-                    },
-                },
-                filetypes = {
-                    yaml = false,
-                    markdown = false,
-                    help = false,
-                    gitcommit = false,
-                    gitrebase = false,
-                    hgcommit = false,
-                    svn = false,
-                    cvs = false,
-                    ["."] = false,
-                },
-                copilot_node_command = 'node', -- Node.js version must be > 16.x
-                server_opts_overrides = {},
-            })
-        end,
-    }
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end

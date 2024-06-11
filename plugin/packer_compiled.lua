@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/philipp/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1702233742/share/lua/5.1/?/init.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1702233742/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/philipp/.cache/nvim/packer_hererocks/2.1.1702233742/lib/lua/5.1/?.so"
+local package_path_str = "/home/philipp/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?/init.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?.lua;/home/philipp/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/philipp/.cache/nvim/packer_hererocks/2.1.1713773202/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -75,7 +75,7 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["ChatGPT.nvim"] = {
-    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fchatgpt\frequire\0" },
+    config = { "\27LJ\2\nd\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\16api_key_cmd pass show api/tokens/openai\nsetup\fchatgpt\frequire\0" },
     loaded = true,
     path = "/home/philipp/.local/share/nvim/site/pack/packer/start/ChatGPT.nvim",
     url = "https://github.com/jackMort/ChatGPT.nvim"
@@ -85,19 +85,15 @@ _G.packer_plugins = {
     path = "/home/philipp/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/philipp/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/philipp/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
-  },
-  ["copilot.lua"] = {
-    commands = { "Copilot" },
-    config = { "\27LJ\2\ná\2\0\0\5\0\v\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\0025\3\b\0=\3\t\0024\3\0\0=\3\n\2B\0\2\1K\0\1\0\26server_opts_overrides\14filetypes\1\0\t\rmarkdown\1\tyaml\1\6.\1\bcvs\1\bsvn\1\rhgcommit\1\14gitrebase\1\14gitcommit\1\thelp\1\15suggestion\1\0\1\25copilot_node_command\tnode\vkeymap\1\0\6\16accept_line\1\16accept_word\1\vaccept\n<C-j>\tprev\n<M-[>\fdismiss\n<C-]>\tnext\n<M-]>\1\0\3\17auto_trigger\2\fenabled\2\rdebounce\3K\nsetup\fcopilot\frequire\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/philipp/.local/share/nvim/site/pack/packer/opt/copilot.lua",
-    url = "https://github.com/zbirenbaum/copilot.lua"
   },
   ["formatter.nvim"] = {
     loaded = true,
@@ -201,41 +197,27 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/philipp/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/philipp/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: ChatGPT.nvim
-time([[Config for ChatGPT.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fchatgpt\frequire\0", "config", "ChatGPT.nvim")
-time([[Config for ChatGPT.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: ChatGPT.nvim
+time([[Config for ChatGPT.nvim]], true)
+try_loadstring("\27LJ\2\nd\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\16api_key_cmd pass show api/tokens/openai\nsetup\fchatgpt\frequire\0", "config", "ChatGPT.nvim")
+time([[Config for ChatGPT.nvim]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
-
--- Command lazy-loads
-time([[Defining lazy-load commands]], true)
-pcall(vim.api.nvim_create_user_command, 'Copilot', function(cmdargs)
-          require('packer.load')({'copilot.lua'}, { cmd = 'Copilot', l1 = cmdargs.line1, l2 = cmdargs.line2, bang = cmdargs.bang, args = cmdargs.args, mods = cmdargs.mods }, _G.packer_plugins)
-        end,
-        {nargs = '*', range = true, bang = true, complete = function()
-          require('packer.load')({'copilot.lua'}, {}, _G.packer_plugins)
-          return vim.fn.getcompletion('Copilot ', 'cmdline')
-      end})
-time([[Defining lazy-load commands]], false)
-
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Event lazy-loads
-time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'copilot.lua'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-time([[Defining lazy-load event autocommands]], false)
-vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

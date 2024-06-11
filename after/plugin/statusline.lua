@@ -1,8 +1,8 @@
-local custom_gruvbox = require'lualine.themes.gruvbox_light'
+local line = require'lualine.themes.auto'
 
 require('lualine').setup {
   options = { 
-      theme  = custom_gruvbox,
+      theme  = line,
       section_separators = {'', ''},
       component_separators = {'', ''}
   },

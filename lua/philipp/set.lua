@@ -25,3 +25,7 @@ vim.opt.updatetime = 50
 vim.opt.termguicolors = true
 
 vim.opt.colorcolumn = "90"
+
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 99
+vim.opt.foldclose= "all"
