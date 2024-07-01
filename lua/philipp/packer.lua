@@ -76,8 +76,20 @@ require('packer').startup(function(use)
     require("obsidian").setup({
       workspaces = {
         {
-          name = "personal",
-          path = "~/Obsidian/Philipp",
+          name = "Personal",
+          path = "~/Obsidian/Personal",
+        },
+        {
+          name = "ComputerScience",
+          path = "~/Obsidian/ComputerScience",
+        },
+        {
+          name = "Rust",
+          path = "~/Obsidian/Rust",
+        },
+        {
+          name = "Suitcase",
+          path = "~/Obsidian/Suitcase",
         },
       },
     })

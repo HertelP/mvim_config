@@ -168,7 +168,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["obsidian.nvim"] = {
-    config = { "\27LJ\2\n\1\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\15workspaces\1\0\1\15workspaces\0\1\0\2\tpath\23~/Obsidian/Philipp\tname\rpersonal\nsetup\robsidian\frequire\0" },
+    config = { "\27LJ\2\nª\2\0\0\5\0\t\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0004\3\5\0005\4\3\0>\4\1\0035\4\4\0>\4\2\0035\4\5\0>\4\3\0035\4\6\0>\4\4\3=\3\b\2B\0\2\1K\0\1\0\15workspaces\1\0\1\15workspaces\0\1\0\2\tname\rSuitcase\tpath\24~/Obsidian/Suitcase\1\0\2\tname\tRust\tpath\20~/Obsidian/Rust\1\0\2\tname\20ComputerScience\tpath\31~/Obsidian/ComputerScience\1\0\2\tname\rPersonal\tpath\24~/Obsidian/Personal\nsetup\robsidian\frequire\0" },
     loaded = true,
     path = "/home/philipp/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
     url = "https://github.com/epwalsh/obsidian.nvim"
@@ -216,18 +216,18 @@ time([[Defining packer_plugins]], false)
 time([[Config for ChatGPT.nvim]], true)
 try_loadstring("\27LJ\2\nd\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\16api_key_cmd pass show api/tokens/openai\nsetup\fchatgpt\frequire\0", "config", "ChatGPT.nvim")
 time([[Config for ChatGPT.nvim]], false)
--- Config for: obsidian.nvim
-time([[Config for obsidian.nvim]], true)
-try_loadstring("\27LJ\2\n\1\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\15workspaces\1\0\1\15workspaces\0\1\0\2\tpath\23~/Obsidian/Philipp\tname\rpersonal\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
-time([[Config for obsidian.nvim]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
-time([[Config for todo-comments.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
+-- Config for: obsidian.nvim
+time([[Config for obsidian.nvim]], true)
+try_loadstring("\27LJ\2\nª\2\0\0\5\0\t\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\a\0004\3\5\0005\4\3\0>\4\1\0035\4\4\0>\4\2\0035\4\5\0>\4\3\0035\4\6\0>\4\4\3=\3\b\2B\0\2\1K\0\1\0\15workspaces\1\0\1\15workspaces\0\1\0\2\tname\rSuitcase\tpath\24~/Obsidian/Suitcase\1\0\2\tname\tRust\tpath\20~/Obsidian/Rust\1\0\2\tname\20ComputerScience\tpath\31~/Obsidian/ComputerScience\1\0\2\tname\rPersonal\tpath\24~/Obsidian/Personal\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
+time([[Config for obsidian.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
