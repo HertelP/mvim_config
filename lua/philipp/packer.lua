@@ -87,10 +87,6 @@ require('packer').startup(function(use)
           name = "Rust",
           path = "~/Obsidian/Rust",
         },
-        {
-          name = "Suitcase",
-          path = "~/Obsidian/Suitcase",
-        },
       },
     })
   end,
