@@ -19,7 +19,6 @@ vim.keymap.set("v","<leader>d","\"_d")
 vim.keymap.set("v","<leader>d","\"_d")
 
 vim.keymap.set("n","<leader>O",":vsplit <CR> <C-W>l :ObsidianSearch <CR>")
-vim.keymap.set("n","<leader>W",":ObsidianWorkspace <CR>")
 
 vim.keymap.set("n","Q","<nop>")
 
