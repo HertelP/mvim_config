@@ -19,6 +19,7 @@ require('packer').startup(function(use)
         lazy = false
     }
     use { "catppuccin/nvim", as = "catppuccin"}
+    use "rebelot/kanagawa.nvim"
 	use {
   		'nvim-telescope/telescope.nvim', tag = '0.1.8',
 		-- or                            , branch = '0.1.x',
@@ -77,7 +78,7 @@ require('packer').startup(function(use)
       workspaces = {
         {
           name = "Personal",
-          path = "~/Documents/Obsidian/Personal",
+          path = "~/Obsidian/Personal",
         }
       },
     })
@@ -86,6 +87,78 @@ require('packer').startup(function(use)
 
     use {
         "tpope/vim-fugitive",
+    }
+    use {
+        "lewis6991/gitsigns.nvim",
+        config = function() require("gitsigns").setup {
+            current_line_blame = true,
+        } end
+    }
+    use {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                theme = 'doom',
+                config = {
+                    header = {
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
+                            "████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
+                            "██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",
+                            "██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║",
+                            "██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║",
+                            "╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                    }, 
+                    center = {
+                        { desc = '󰊳 Update', group = '@property', action = 'PackerSync', key = 'u' },
+                        {
+                            icon = ' ',
+                            icon_hl = '@variable',
+                            desc = 'Files',
+                            group = 'Label',
+                            action = 'Telescope find_files',
+                            key = 'f',
+                        },
+                    },
+                    footer = {}  --your footer
+                }
+            }
+        end,
+        requires = {'nvim-tree/nvim-web-devicons'}
     }
     use {
         'nvim-lualine/lualine.nvim',

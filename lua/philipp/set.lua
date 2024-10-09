@@ -5,6 +5,7 @@ vim.opt_local.conceallevel = 2
 
 vim.opt.ignorecase = true
 vim.opt.wrap = false 
+vim.opt.cursorline = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
