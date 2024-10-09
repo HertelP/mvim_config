@@ -1,98 +1,92 @@
 local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+    local fn = vim.fn
+    local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+        vim.cmd [[packadd packer.nvim]]
+        return true
+    end
+    return false
 end
 
 local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function(use)
-  	use 'wbthomason/packer.nvim'
+    use 'wbthomason/packer.nvim'
     use { "ellisonleao/gruvbox.nvim" }
-    use { 
+    use {
         "christoomey/vim-tmux-navigator",
         lazy = false
     }
-    use { "catppuccin/nvim", as = "catppuccin"}
+    use { "catppuccin/nvim", as = "catppuccin" }
     use "rebelot/kanagawa.nvim"
-	use {
-  		'nvim-telescope/telescope.nvim', tag = '0.1.8',
-		-- or                            , branch = '0.1.x',
-  		requires = { {'nvim-lua/plenary.nvim'} }
-	}
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
---	Plug 'nvim-lua/plenary.nvim' 
-	use('ThePrimeagen/harpoon')
-	use('mbbill/undotree')
-
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
-		requires = {
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},             -- Required
-			{'williamboman/mason.nvim'},           -- Optional
-			{'williamboman/mason-lspconfig.nvim'}, -- Optional
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        -- or                            , branch = '0.1.x',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    --	Plug 'nvim-lua/plenary.nvim'
+    use('ThePrimeagen/harpoon')
+    use('mbbill/undotree')
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
+        requires = {
+            -- LSP Support
+            { 'neovim/nvim-lspconfig' },  -- Required
+            { 'williamboman/mason.nvim' }, -- Optional
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            {'hrsh7th/nvim-cmp'},     -- Required
-            {'hrsh7th/cmp-nvim-lsp'}, -- Required
-            {'L3MON4D3/LuaSnip'},     -- Required
+            { 'hrsh7th/nvim-cmp' },   -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'L3MON4D3/LuaSnip' },   -- Required
         }
     }
+    --    use({
+    --        "jackMort/ChatGPT.nvim",
+    --     config = function()
+    --         require("chatgpt").setup({
+    --             api_key_cmd = "pass show api/tokens/openai"
+    --         })
+    --     end,
+    --     requires = {
+    --         "MunifTanjim/nui.nvim",
+    --         "nvim-lua/plenary.nvim",
+    --         "nvim-telescope/telescope.nvim"
+    --     }
+    -- })
     use({
-        "jackMort/ChatGPT.nvim",
+        "epwalsh/obsidian.nvim",
+        tag = "*", -- recommended, use latest release instead of latest commit
+        requires = {
+            -- Required.
+            "nvim-lua/plenary.nvim",
+
+        },
         config = function()
-            require("chatgpt").setup({
-                api_key_cmd = "pass show api/tokens/openai"
+            require("obsidian").setup({
+                workspaces = {
+                    {
+                        name = "Personal",
+                        path = "~/Obsidian/Personal",
+                    }
+                },
             })
         end,
-        requires = {
-            "MunifTanjim/nui.nvim",
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim"
-        }
     })
-    use({
-        "kdheepak/lazygit.nvim",
-        -- optional for floating window border decoration
-        requires = {
-            "nvim-lua/plenary.nvim",
-        },
-    })
-    use({
-  "epwalsh/obsidian.nvim",
-  tag = "*",  -- recommended, use latest release instead of latest commit
-  requires = {
-    -- Required.
-    "nvim-lua/plenary.nvim",
-
-  },
-  config = function()
-    require("obsidian").setup({
-      workspaces = {
-        {
-          name = "Personal",
-          path = "~/Obsidian/Personal",
-        }
-      },
-    })
-  end,
-})
 
     use {
         "tpope/vim-fugitive",
     }
     use {
         "lewis6991/gitsigns.nvim",
-        config = function() require("gitsigns").setup {
-            current_line_blame = true,
-        } end
+        config = function()
+            require("gitsigns").setup {
+                current_line_blame = true,
+            }
+        end
     }
     use {
         'nvimdev/dashboard-nvim',
@@ -102,47 +96,39 @@ require('packer').startup(function(use)
                 theme = 'doom',
                 config = {
                     header = {
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
-                            "████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
-                            "██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",
-                            "██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║",
-                            "██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║",
-                            "╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                            "",
-                    }, 
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
+                        "████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
+                        "██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",
+                        "██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║",
+                        "██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║",
+                        "╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                    },
                     center = {
                         { desc = '󰊳 Update', group = '@property', action = 'PackerSync', key = 'u' },
                         {
@@ -154,11 +140,11 @@ require('packer').startup(function(use)
                             key = 'f',
                         },
                     },
-                    footer = {}  --your footer
+                    footer = {} --your footer
                 }
             }
         end,
-        requires = {'nvim-tree/nvim-web-devicons'}
+        requires = { 'nvim-tree/nvim-web-devicons' }
     }
     use {
         'nvim-lualine/lualine.nvim',
