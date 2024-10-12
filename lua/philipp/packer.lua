@@ -81,6 +81,9 @@ require('packer').startup(function(use)
         "tpope/vim-fugitive",
     }
     use {
+        "tpope/vim-surround",
+    }
+    use {
         "lewis6991/gitsigns.nvim",
         config = function()
             require("gitsigns").setup {
