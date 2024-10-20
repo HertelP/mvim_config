@@ -90,7 +90,7 @@ _G.packer_plugins = {
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["dashboard-nvim"] = {
-    config = { "\27LJ\2\n�\t\0\0\6\0\f\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\3\0005\5\a\0>\5\1\0045\5\b\0>\5\2\4=\4\t\0034\4\0\0=\4\n\3=\3\v\2B\0\2\1K\0\1\0\vconfig\vfooter\vcenter\1\0\6\tdesc\nFiles\ticon\t \bkey\6f\vaction\25Telescope find_files\ngroup\nLabel\ficon_hl\14@variable\1\0\4\ngroup\14@property\tdesc\16󰊳 Update\bkey\6u\vaction\15PackerSync\vheader\1\0\3\vfooter\0\vheader\0\vcenter\0\1!\0\0\5\5\5\5\5\5\5\5\5\5\5�\1███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗�\1████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║�\1██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║�\1██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║�\1██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║�\1╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝\5\5\5\5\5\5\5\5\5\5\5\5\5\5\5\1\0\2\ntheme\tdoom\vconfig\0\nsetup\14dashboard\frequire\0" },
+    config = { "\27LJ\2\n�\t\0\0\6\0\f\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0034\4\3\0005\5\a\0>\5\1\0045\5\b\0>\5\2\4=\4\t\0034\4\0\0=\4\n\3=\3\v\2B\0\2\1K\0\1\0\vconfig\vfooter\vcenter\1\0\6\vaction\25Telescope find_files\bkey\6f\tdesc\nFiles\ngroup\nLabel\ficon_hl\14@variable\ticon\t \1\0\4\vaction\15PackerSync\bkey\6u\tdesc\16󰊳 Update\ngroup\14@property\vheader\1\0\3\vfooter\0\vheader\0\vcenter\0\1!\0\0\5\5\5\5\5\5\5\5\5\5\5�\1███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗�\1████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║�\1██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║�\1██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║�\1██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║�\1╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝\5\5\5\5\5\5\5\5\5\5\5\5\5\5\5\1\0\2\vconfig\0\ntheme\tdoom\nsetup\14dashboard\frequire\0" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
@@ -170,7 +170,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["obsidian.nvim"] = {
-    config = { "\27LJ\2\n�\1\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\15workspaces\1\0\1\15workspaces\0\1\0\2\tname\rPersonal\tpath\24~/Obsidian/Personal\nsetup\robsidian\frequire\0" },
+    config = { "\27LJ\2\n�\2\0\0\5\0\v\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\0025\3\6\0004\4\0\0=\4\a\3=\3\b\0025\3\t\0=\3\n\2B\0\2\1K\0\1\0\16daily_notes\1\0\3\rtemplate\22Daily Template.md\vfolder\18Journal/Daily\16date_format\r%Y-%m-%d\14templates\18substitutions\1\0\4\16time_format\n%H:%M\vfolder\14Templates\18substitutions\0\16date_format\r%Y-%m-%d\15workspaces\1\0\3\16daily_notes\0\15workspaces\0\14templates\0\1\0\2\tpath\24~/Obsidian/Personal\tname\rPersonal\nsetup\robsidian\frequire\0" },
     loaded = true,
     path = "/home/HertelP/.local/share/nvim/site/pack/packer/start/obsidian.nvim",
     url = "https://github.com/epwalsh/obsidian.nvim"
@@ -219,22 +219,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
 -- Config for: obsidian.nvim
 time([[Config for obsidian.nvim]], true)
-try_loadstring("\27LJ\2\n�\1\0\0\5\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\2B\0\2\1K\0\1\0\15workspaces\1\0\1\15workspaces\0\1\0\2\tname\rPersonal\tpath\24~/Obsidian/Personal\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
+try_loadstring("\27LJ\2\n�\2\0\0\5\0\v\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0004\3\3\0005\4\3\0>\4\1\3=\3\5\0025\3\6\0004\4\0\0=\4\a\3=\3\b\0025\3\t\0=\3\n\2B\0\2\1K\0\1\0\16daily_notes\1\0\3\rtemplate\22Daily Template.md\vfolder\18Journal/Daily\16date_format\r%Y-%m-%d\14templates\18substitutions\1\0\4\16time_format\n%H:%M\vfolder\14Templates\18substitutions\0\16date_format\r%Y-%m-%d\15workspaces\1\0\3\16daily_notes\0\15workspaces\0\14templates\0\1\0\2\tpath\24~/Obsidian/Personal\tname\rPersonal\nsetup\robsidian\frequire\0", "config", "obsidian.nvim")
 time([[Config for obsidian.nvim]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
--- Config for: gitsigns.nvim
-time([[Config for gitsigns.nvim]], true)
-try_loadstring("\27LJ\2\nQ\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23current_line_blame\2\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
-time([[Config for gitsigns.nvim]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

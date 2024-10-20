@@ -18,7 +18,8 @@ vim.keymap.set("n","<leader>d","\"_d")
 vim.keymap.set("v","<leader>d","\"_d")
 vim.keymap.set("v","<leader>d","\"_d")
 
-vim.keymap.set("n","<leader>O",":vsplit <CR> <C-W>l :ObsidianSearch <CR>")
+vim.keymap.set("n","<leader>OO",":vsplit <CR> <C-W>l :ObsidianSearch <CR>")
+vim.keymap.set("n","<leader>OD",":ObsidianToday <CR>")
 
 vim.keymap.set("n","Q","<nop>")
 

@@ -1,7 +1,7 @@
 vim.opt.relativenumber = true
 vim.opt.nu = true
 vim.opt.mouse = c
-vim.opt_local.conceallevel = 2
+vim.opt.conceallevel = 2
 
 vim.opt.ignorecase = true
 vim.opt.wrap = false 
